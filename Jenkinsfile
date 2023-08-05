@@ -23,7 +23,7 @@ def PRODUCTION_NODE_LABEL = 'prime'
 
 
 
-node("${STAGING_NODE_LABEL}") {
+node() {
 
     stage('Checkout and set agent') {
         script{
@@ -53,7 +53,7 @@ pipeline {
 
     environment {
         PRIVATE_REGISTRY_URL='127.0.0.1:5001'
-        NETWORK_NAME='gds-centriqo-lms-infrastructure_centriqo'
+        NETWORK_NAME='assureth-infrastructure_assureth'
     }
     stages {
 
