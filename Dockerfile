@@ -27,4 +27,4 @@ FROM maven:3.8.5-openjdk-18
 WORKDIR /app
 ENV JAVA_TOOL_OPTIONS -agentlib:jdwp=transport=dt_socket,address=5010,server=y,suspend=n
 COPY --from=MAVEN_BUILD /build/core-service/target/centriqo_lms_core_service-0.0.1-SNAPSHOT.jar /app/
-ENTRYPOINT ["java", "-jar", "centriqo_lms_core_service-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "authmarshal-proxy-service-0.0.1-SNAPSHOT.jar"]
