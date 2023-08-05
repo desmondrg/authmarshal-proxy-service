@@ -1,0 +1,16 @@
+server:
+  port: 2222
+zuul:
+  routes:
+    admins:
+      path: /admins/**
+      url: https://cunning-koala-9ioqcd-dev-ed.my.salesforce-sites.com/services/apexrest/charon/admins
+    orgs:
+      path: /orgs/**
+      url: https://cunning-koala-9ioqcd-dev-ed.my.salesforce-sites.com/services/apexrest/charon/orgs
+    users:
+      path: /users/**
+      url: https://cunning-koala-9ioqcd-dev-ed.my.salesforce-sites.com/services/apexrest/charon/users
+    delegate:
+      path: /delegate/**
+      url: https://cunning-koala-9ioqcd-dev-ed.my.salesforce-sites.com/services/apexrest/charon/delegate
